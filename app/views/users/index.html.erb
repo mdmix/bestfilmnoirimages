@@ -1,0 +1,30 @@
+
+<br>
+<br>
+<br>
+<h1>Users</h1>
+
+  <div class="container-fluid all-users">
+    <% @users.each do |user| %>
+      <div class="row users-row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 users-emails">
+          <p><%= user.email %></p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 users-show">
+          <span><%= link_to 'Show', user, class: "users-changes" %></span>
+
+          <span><%= link_to 'Edit', edit_user_path(user), class: "users-changes" %></span>
+
+          <span><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "users-changes" %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+<br>
+
+<div class="link-table">
+  <%= link_to 'New User', new_user_path, class: "links-users" %>
+</div>
+<br>
+<br>

@@ -1,0 +1,500 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// * {
+//     outline: 1px solid red;
+// }
+
+
+.products-display, h5, .links-combo, #rid-frame, .email-column, .link-table, .rated, .rating, .users-row {
+  text-align: center;
+}
+
+h5 {
+  position: relative;
+  bottom: 3vh;
+}
+
+.products-overview {
+  bottom: 5vh;
+  position: relative;
+}
+
+.titles-spread {
+  display: none;
+}
+
+.newly-created {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.badge {
+  background-color: #5AD4C2;
+  color: #ff0;
+}
+
+#pay-button {
+  text-align: center;
+  color: orange;
+  // background-image: none;
+}
+
+#pay-button>.stripe-button-el {
+  background-image: -webkit-linear-gradient(#ff0, #F77E14);
+}
+
+form>.stripe-button-el>span {
+  background-image: none;
+  background-color: magenta;
+  color: #ff0;
+  // padding: 0.5em;
+  padding-bottom: 1em;
+}
+
+#reviews, #ratings-range {
+  width: 100%;
+  background-color: #5AD4C2;
+  color: #FFE5CC;
+  padding-left: -30px;
+  padding-right: -30px;
+  text-align: center;
+}
+
+.numerical-ratings {
+  position: relative;
+  bottom: 0.4em;
+}
+
+#new_comment {
+  width: 63%;
+  margin: 0 auto;
+  background-color: #ff0;
+  // color: #5AD4C2;
+  text-align: center;
+  // line-height: 4em;
+}
+
+#comment_body {
+  height: 6em;
+  line-height: 1.3em;
+}
+
+.product-reviews {
+  width: 63%;
+  margin: 0 auto;
+  background-color: #5AD4C2;
+  color: #FFE5CC;
+}
+
+.pages-frame {
+  width: 63%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  bottom: 1em;
+}
+
+.reviews-lines, .pix-lines {
+  width: 84%;
+}
+
+#rid-reviews {
+  top: 0.3em;
+  position: relative;
+}
+
+.product-input {
+  top: 2vh;
+  position: relative;
+  font-weight: bolder;
+  color: #5AD4C2;
+}
+
+.products-pix {
+  text-align: center;
+  width: 39%;
+  margin: 0 auto;
+}
+
+.link-table {
+  position: relative;
+  top: 3em;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.label-email, .label-password {
+  top: 3.3vh;
+}
+
+.label-min-password {
+  top: 2.9em;
+}
+
+#min-password {
+  top: 1.6em;
+  position: relative;
+}
+
+.form-control, .contact-label, #sign-up, #log-in, #new_user, #edit_user, #edit-product, .user-form, .access-click, .cancel-frame, #unhappy-frame, .link-frame, .links-products-form, #error_explanation, .field_with_errors {
+  width: 73%;
+  margin: 0 auto;
+}
+
+#error_explanation {
+  margin-left: 13.5%;
+}
+
+.cancel-text {
+  background-color: black;
+  color: white;
+}
+
+#contact-name, #unhappy-text {
+  width: 73%;
+}
+
+#unhappy-text {
+  text-align: center;
+  padding-top: 0.9em;
+  padding-bottom: 0.6em;
+}
+
+.link-frame {
+  padding-top: 1.6em;
+}
+
+.user-email, .user-password, #user_email, #user_password, #user_password_confirmation, #user_current_password, .user-names, .product-details {
+  width: 100%;
+}
+
+.show-names {
+  text-align: left;
+  width: 73%;
+}
+
+.contact-label, .name-label, .product-label {
+  top: 0.1em;
+}
+
+.check-box {
+  width: fit-content;
+}
+
+#search-label {
+  display: block;
+  width: fit-content;
+  text-align: center;
+}
+
+#search-form {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding-right: 4vw;
+}
+
+#search-form-wide {
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+#form-shape {
+  text-align: left;
+  width: 89%;
+  margin: 0 auto;
+}
+
+.links-products {
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  display: inline-block;
+  // text-align: center;
+}
+
+.links-products>a {
+  float: left;
+}
+
+.links-show {
+  padding-left: 3.9vw;
+  padding-right: 3.9vw;
+}
+
+// .links-edit, .links-new {
+//   padding-left: 2.6vw;
+//   padding-right: 2.6vw;
+// }
+
+h3, #product-title, #caption {
+  color: #ff0;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table-row {
+  line-height: 2vw;
+}
+
+.products-details {
+  width: 93%;
+}
+
+.products-background {
+  width: 76%;
+  margin: 6vw auto;
+  background-color: #5AD4C2;
+}
+
+#name, #description, #image, .product-table {
+  width: 23%;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+#colour {
+  width: 83%;
+  color: #ff0;
+}
+
+#new-products {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#new-products>a:hover {
+  color: #F77E14;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;/* Safari */
+}
+
+#new-products>a:visited {
+  color: #5AD4C2;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;/* Safari */
+}
+
+label {
+  line-height: 1.3em;
+  top: 0.4em;
+  position: relative;
+}
+
+.actions input {
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+}
+
+.actions input:hover, h5, .product-header {
+  color: #F77E14;
+}
+
+#reviews-header {
+  color: #ff0;
+}
+
+.actions>input, #submit-review {
+  line-height: 1.9em;
+  color: #ff0;
+  background-color: #F77E14;
+}
+
+// #edit-h, #new-h {
+//   margin-right: 0;
+//   margin-left: 0;
+//   width: 73%;
+// }
+
+input, textarea {
+  width: 73%;
+  line-height: 1.9em;
+}
+
+.reset {
+  width: 100%;
+}
+
+#new-products>a {
+  margin-right: 0.5vw;
+}
+
+h4 {
+  background-color: #F77E14;
+  color: #ff0;
+  text-align: center;
+  width: 39%;
+  margin: 0 auto;
+}
+
+.orders-frame {
+  padding-bottom: 0.9em;
+}
+
+.orders-overview {
+  display: inline;
+}
+
+.orders-details {
+  background-color: #ff0;
+  width: 73%;
+  margin: 0 auto;
+  padding-top: 0.2em;
+}
+
+.orders-numbers, .orders-names:visited {
+  color: #5AD4C2;
+}
+
+.orders-names, #orders-prices {
+  color: #F77E14;
+}
+
+.order-header {
+  color: black;
+}
+
+.order-info-title, .order-field, .field-input {
+  color: #ff0;
+}
+
+hr {
+  width: 59%;
+  border-width: 0.6vw;
+  border-color: #F77E14;
+  padding-bottom: 0.9vh;
+}
+
+.form-line {
+  width: 73%;
+  margin-left: 0;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  border-width: 0.9vh;
+  border-color: #5AD4C2;
+  padding-bottom: 0.3vh;
+}
+
+.product-info-background {
+  background-color: #ff0;
+  width: 63%;
+  margin: 0 auto;
+}
+
+.order-info-background {
+  background-color: #F77E14;
+  width: 89%;
+  margin: 0 auto;
+}
+
+
+/* Typography */
+
+th, #orders-descriptions, #orders-prices, .cancel-text, #unhappy-text {
+  font-family: 'Fugaz One', Arial Black, Impact, sans-serif;
+  font-size: calc(0.6em + 1.1vw);
+}
+
+.product-table {
+  font-family: 'Cousine', Arial Black, Impact, sans-serif;
+  font-size: calc(0.6em + 0.6vw);
+}
+
+.order-header {
+  font-family: 'Fugaz One', Arial Black, Impact, sans-serif;
+  font-size: calc(0.7em + 0.9vw);
+}
+
+.newly-created, .actions, h4, .orders-numbers, .order-info, .field-input, #product-title, form>.stripe-button-el>span {
+  font-size: calc(0.6em + 1.8vw);
+  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+}
+
+// .reviews-text {
+//   font-size: calc(0.8em + 1.7vw);
+//   font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+// }
+
+.search-submit, label, .form_label, .reset {
+font-size: calc(0.4em + 0.9vw);
+font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+}
+
+.field-input, h5, .product-input {
+  font-size: calc(0.9em + 1.9vw);
+  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+}
+
+h3 {
+  font-size: calc(0.4em + 0.8vw);
+  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+  font-weight: bolder;
+}
+
+#reviews-header, .reviews-text {
+font-size: calc(0.6em + 1.3vw);
+font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+}
+
+.products-details, .badge {
+  font-family: 'Fugaz One', Arial Black, Impact, sans-serif;
+  font-size: calc(0.6em + 0.9vw);
+}
+
+#min-password, #comment_body {
+  font-family: 'Fugaz One', Arial Black, Impact, sans-serif;
+  font-size: calc(0.4em + 0.9vw);
+}
+
+.alert-info {
+  font-family: 'Fugaz One', Arial Black, Impact, sans-serif;
+  font-size: calc(0.9em + 1.8vw);
+}
+
+.links-products>a, .links-show {
+  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-size: calc(1.1em + 1.9vw);
+}
+
+.product-header {
+  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-size: calc(1.3em + 1.9vw);
+}
+
+.orders-names {
+  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-size: calc(1.1em + 1.9vw);
+}
+
+#new-products>a {
+  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-size: calc(1.9em + 3.9vw);
+}
+
+a, .previous_page, .current {
+  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-size: calc(1.6em + 1.9vw);
+}
+
+#rid-reviews {
+  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-size: calc(0.9em + 1.4vw);
+}
+
+.links-users {
+  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-size: calc(1.7em + 2.7vw);
+}

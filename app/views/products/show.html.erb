@@ -1,0 +1,104 @@
+<br>
+<br>
+
+<!-- <p id="notice"><%#= notice %></p> -->
+
+<br>
+<br>
+
+<!-- <% logger.debug "This product is up" %> -->
+<section class="product-info-background" data-product-id="<%= @product.id %>">
+
+<% cache @product do %>
+  <p class="newly-created">
+    <strong class="product-header">Pic:</strong>
+    <br>
+    <span class="product-input"><%= image_tag(@product.image_url, class: "img-zoom img-responsive products-pix", data_zoom_image: 'image_tag(@product.big_image_url)' ) unless @product.image_url.nil? %></span>
+    <!-- also possible: 'image_tag(@product.image_url(:large))' -->
+  </p>
+
+  <p>Clicks: <span class="badge"><%= @product.views %></span></p>
+
+  <hr class="pix-lines">
+
+  <p class="newly-created">
+    <strong class="product-header">Name:</strong>
+    <br>
+    <span class="product-input"><%= @product.name %></span>
+  </p>
+
+  <p class="newly-created">
+    <strong class="product-header">Description:</strong>
+    <br>
+    <span class="product-input"><%= @product.description %></span>
+  </p>
+
+  <p class="newly-created">
+    <strong class="product-header">Colour:</strong>
+    <br>
+    <span class="product-input"><%= @product.colour %></span>
+  </p>
+
+  <p class="newly-created">
+    <strong class="product-header">Price:</strong>
+    <br>
+    <span class="product-input">$<%= @product.price %></span>
+  </p>
+
+  <p class="newly-created">
+    <%= form_with(url: '/payments/create', id: "pay-button") do |form| %>
+      <%= render partial: "devise/shared/stripe_checkout_button" %>
+      <%= hidden_field_tag(:product_id, @product.id) %>
+      <%= hidden_field_tag(:product_name, @product.name) %>
+    <% end %>
+  </p>
+  <br>
+  <p class="newly-created" id="reviews">
+    <strong class="product-header" id="reviews-header">Reviews – range:</strong>
+    <br>
+    <div id="ratings-range">
+      <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      <br>
+        <span class="reviews-text">
+          <b>
+          <i class="fas fa-user-secret"></i>
+          <span>Highest<br>
+            <span class="numerical-ratings"><%= @product.highest_rating_comment&.rating %></span></span>
+          <br>
+          <i class="fas fa-user-secret"></i>
+          <span>Lowest<br>
+            <span class="numerical-ratings"><%= @product.lowest_rating_comment&.rating %><br></span></span></b>
+        </span>
+        <br>
+    </div>
+  </p>
+
+<% end %>
+
+</section>
+
+<br>
+<br>
+<br>
+<div class="alert alert-info" style="display:none" role="alert">Someone added a new review!</div>
+
+<%= render 'new_comment' %>
+
+<%= render 'comments' %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="pages-frame">
+  <%= will_paginate @comments, :previous_label => '←', :next_label => '→' %>
+</div>
+
+<br>
+<br>
+
+<div class="links-combo">
+  <%= link_to 'Edit', edit_product_path(@product), :class => "links-show" %> |
+  <%= link_to 'Back', products_path, :class => "links-show" %>
+</div>
