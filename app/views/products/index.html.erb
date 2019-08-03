@@ -35,37 +35,3 @@
 <div class="pages-frame">
   <%= will_paginate @products, :previous_label => '←', :next_label => '→' %>
 </div>
-
-<!-- <table>
-  <thead>
-    <tr class="table-row">
-      <th id="name">Name</th>
-      <th id="description">Description</th>
-      <th id="image">Image url</th>
-      <th id="colour">Colour</th>
-      <th id="price">Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr class="table-row">
-        <td class="product-table"><div class="product-details"><%= product.name %></td>
-        <td class="product-table"><div class="product-details"><%= product.description %></td>
-        <td class="product-table"><div class="product-details"><%= product.image_url %></td>
-        <td class="product-table"><div class="product-details"><%= product.colour %></td>
-        <td class="product-table"><div class="product-details"><%= product.price %></td>
-        <td class="links-products"><%= link_to 'Show', product %></td>
-        <td class="links-products"><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td class="links-products" id="final-link"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-<!-- <%# paragraph_number = 1 %>
-<%# 5.times do %>
-  <p>This is paragraph number <%#= paragraph_number %></p>
-  <%# paragraph_number = paragraph_number + 1 %>
-<%# end %> -->
