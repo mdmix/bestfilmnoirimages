@@ -70,7 +70,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "bestfilmnoirimages_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "standoutfilmnoirimages_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
 
@@ -101,9 +101,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'bestfilmnoirimages.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'standoutfilmnoirimages.herokuapp.com' }
 
-  config.web_socket_server_url = "wss://bestfilmnoirimages.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://bestfilmnoirimages.herokuapp.com', 'http://bestfilmnoirimages.herokuapp.com']
+  config.web_socket_server_url = "wss://standoutfilmnoirimages.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://standoutfilmnoirimages.herokuapp.com', 'http://standoutfilmnoirimages.herokuapp.com']
 
 end
