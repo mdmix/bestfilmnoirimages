@@ -4,6 +4,8 @@ class Product < ApplicationRecord
 	validates :price, presence: true
 
   has_many :comments
+  has_many :product_categories, :dependent => :destroy
+  has_many :categories, :through => :product_categories
 
   def self.search(search_term)
     if Rails.env.production?
