@@ -1,0 +1,11 @@
+h1.jumbotron Admin | Categories
+
+.container
+  .row
+
+    .col-12.card
+      table.table
+        thead
+          th Name
+        tbody
+        = render partial: "categories/category", collection: @categories

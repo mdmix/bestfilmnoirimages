@@ -43,6 +43,11 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
+        @category_array = params.dig(:product, :category_ids)
+        @category_array.each do |cat|
+          @category = Category.find(cat)
+          @product.categories << @category
+        end
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
@@ -57,6 +62,12 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
+        @product.product_categories.destroy_all
+        @category_array = params.dig(:product, :category_ids)
+        @category_array.each do |cat|
+          @category = Category.find(cat)
+          @product.categories << @category
+        end
         format.html { redirect_to simple_pages_landing_page_path, notice: 'Product was successfully updated.' }
         format.json { render :index, status: :ok, location: @products }
       else
@@ -65,6 +76,7 @@ class ProductsController < ApplicationController
       end
     end
   end
+  
 
   # DELETE /products/1
   # DELETE /products/1.json

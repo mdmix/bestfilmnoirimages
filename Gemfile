@@ -93,3 +93,15 @@ gem 'redis'
 # gem 'redis-namespace'
 
 gem 'newrelic_rpm'
+
+gem 'slim'
+
+gem 'braintree', '~> 2.61.1'
+
+gem 'figaro', '~> 1.1.1'
+
+gem 'gon', '~> 6.2.0'
+
+gem 'dotenv'
+
+gem 'dotenv-rails'

@@ -46,6 +46,7 @@
   </p>
 
   <p class="newly-created">
+    <%= link_to "Add to Cart", add_to_cart_path(@product), method: :put %>
     <%= form_with(url: '/payments/create', id: "pay-button") do |form| %>
       <%= render partial: "devise/shared/stripe_checkout_button" %>
       <%= hidden_field_tag(:product_id, @product.id) %>
@@ -57,7 +58,7 @@
     <strong class="product-header" id="reviews-header">Reviews – range:</strong>
     <br>
     <div id="ratings-range">
-      <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></p>
       <br>
         <span class="reviews-text">
           <b>
