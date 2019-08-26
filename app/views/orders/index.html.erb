@@ -11,7 +11,10 @@
         <p><%= link_to order.product.name, order, class: "orders-names" %></p>
         </h1>
         <p id="orders-descriptions"><%= order.product.description %></p>
-        <p id="orders-prices">$<%= order.product.price %></p>
+        <p id="orders-prices">$<%= order.quantity %></p>
+        <p id="orders-descriptions"><%= order.created_at.getlocal.strftime("%e-%m-%y %H:%M") %></p>
+        <p id="orders-emails"><%= order.user.email %></p>
+
         <hr>
       </section>
     </div><!-- /col -->

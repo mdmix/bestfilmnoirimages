@@ -47,7 +47,7 @@ GEM
     bindex (0.5.0)
     bootsnap (1.3.1)
       msgpack (~> 1.0)
-    braintree (2.61.1)
+    braintree (2.33.1)
       builder (>= 2.0.0)
     brakeman (4.3.1)
     builder (3.2.3)
@@ -239,9 +239,9 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    turbolinks (5.1.1)
-      turbolinks-source (~> 5.1)
-    turbolinks-source (5.1.0)
+    turbolinks (5.2.0)
+      turbolinks-source (~> 5.2)
+    turbolinks-source (5.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.17)
@@ -263,7 +263,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  braintree (~> 2.61.1)
+  braintree (~> 2.33.1)
   brakeman
   byebug
   cancancan (~> 2.0)

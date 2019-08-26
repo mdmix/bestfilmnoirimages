@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     put 'remove_one/:product_id', to: 'carts#removeone', as: :remove_one
   end
 
+  resources :transactions, only: [:new, :create]
+
   get 'simple_pages/about'
   get 'simple_pages/contact'
   get 'simple_pages/index'

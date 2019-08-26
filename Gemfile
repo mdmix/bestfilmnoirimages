@@ -96,7 +96,7 @@ gem 'newrelic_rpm'
 
 gem 'slim'
 
-gem 'braintree', '~> 2.61.1'
+gem 'braintree', '~> 2.33.1'
 
 gem 'figaro', '~> 1.1.1'
 
