@@ -58,7 +58,7 @@
               <%= link_to('Login', new_user_session_path, class: "nav-link user-access") %>
             </li>
             <% end %>
-            </li>
+            <!-- </li> -->
           </ul>
           <%= form_with(url: products_path, method: 'get', local: true, id:"search-form") do |form| %>
             <div id="form-shape">
@@ -70,7 +70,11 @@
         </div><!-- navbar header -->
         <div class="navbar-collapse collapse nav-box" id="nav-box">
           <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
             <li><%= link_to 'Cart (' + "#{current_user.cart_count}" + ')', cart_path %></li>
+          <% else %>
+            <li><%= link_to 'Cart (0)', cart_path %></li>
+          <% end %>
             <li><%= link_to "Categories", categories_path %></li>
             <li><%= link_to "Contact", simple_pages_contact_path %></li>
             <li><%= link_to "Slideshow", simple_pages_landing_page_path %></li>
