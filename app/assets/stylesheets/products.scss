@@ -282,9 +282,15 @@ h3, #product-title, #caption {
 }
 
 #new-products>a:visited {
-  color: #5AD4C2;
+  color: #fff;
   transition: 0.6s;
   -webkit-transition: 0.6s;/* Safari */
+}
+
+.new-and-all {
+  width: 76%;
+  margin: 0 auto;
+  background-color: whitesmoke;
 }
 
 label {
@@ -409,7 +415,7 @@ th, #orders-descriptions, #orders-prices, .cancel-text, #unhappy-text {
 }
 
 .product-table {
-  font-family: 'Cousine', Arial Black, Impact, sans-serif;
+  font-family: 'Bungee Inline', Arial Black, Impact, sans-serif;
   font-size: calc(0.6em + 0.6vw);
 }
 
@@ -420,33 +426,33 @@ th, #orders-descriptions, #orders-prices, .cancel-text, #unhappy-text {
 
 .newly-created, .actions, h4, .orders-numbers, .order-info, .field-input, #product-title, form>.stripe-button-el>span {
   font-size: calc(0.6em + 1.8vw);
-  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+  font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
 }
 
 // .reviews-text {
 //   font-size: calc(0.8em + 1.7vw);
-//   font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+//   font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
 // }
 
 .search-submit, label, .form_label, .reset {
 font-size: calc(0.4em + 0.9vw);
-font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
 }
 
 .field-input, h5, .product-input {
-  font-size: calc(0.9em + 1.9vw);
-  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+  font-size: calc(2em + 2.9vw);
+  font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
 }
 
 h3 {
   font-size: calc(0.4em + 0.8vw);
-  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+  font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
   font-weight: bolder;
 }
 
 #reviews-header, .reviews-text {
 font-size: calc(0.6em + 1.3vw);
-font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
 }
 
 .products-details, .badge {
@@ -465,36 +471,36 @@ font-family: 'Syncopate', Arial Black, Futura, sans-serif;
 }
 
 .links-products>a, .links-show {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(1.1em + 1.9vw);
 }
 
 .product-header {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(1.3em + 1.9vw);
 }
 
 .orders-names {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(1.1em + 1.9vw);
 }
 
 #new-products>a {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(1.9em + 3.9vw);
 }
 
 a, .previous_page, .current {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(1.6em + 1.9vw);
 }
 
 #rid-reviews {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(0.9em + 1.4vw);
 }
 
 .links-users {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(1.7em + 2.7vw);
 }

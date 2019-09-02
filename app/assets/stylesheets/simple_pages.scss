@@ -2,17 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-color: #FFE5CC;
-}
 
 // * {
 //   margin: 0;
 // }
 
-html, body {
+body {
   height: 100%;
   margin: 0;
+  background-color: #000;
+  background-image: url("https://www.transparenttextures.com/patterns/dotnoise-light-grey.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/subtle-grey.png");
 }
 
 .user-porthole {
@@ -96,19 +97,20 @@ html, body {
 #navbar {
   z-index: 999;
   width: 100%;
-  background-color: #5AD4C2;
+  background-color: whitesmoke;
   padding-left: 0px;
   padding-right: 0px;
 }
 
 .search-input {
-  width: 69%;
+  width: 64%;
 }
 
 .search-submit {
   // float: right;
+  color: whitesmoke;
   width: fit-content;
-  background-color: #ff0;
+  background-color: #F77E14;
   padding: 0.1em;
 }
 
@@ -128,13 +130,30 @@ html, body {
   margin: 0 auto;
 }
 
-h1, h2, p, footer {
+h1, h6, h2, p, footer {
   text-align: center;
+}
+
+h2 {
+  color: #000;
+}
+
+.main-jumbotron {
+  background-color: whitesmoke;
+  width: 76%;
+  margin: 0 auto;
+  padding-top: 39px;
+  padding-bottom: 39px;
+}
+
+.model-jumbotron {
+  background-color: #000;
+  color: white;
 }
 
 .mdmix>a {
   z-index: 999;
-  color: yellow;
+  color: black;
   text-transform: uppercase;
   letter-spacing: 0.35em;
   position: relative;
@@ -149,6 +168,7 @@ h1, h2, p, footer {
 
 .mdmix>a:hover {
   font-size: calc(1.4em + 2vw);
+  color: #F77E14;
 }
 
 .mdmix>a:focus {
@@ -171,12 +191,12 @@ h1, h2, p, footer {
 // }
 
 #navbar li a:active, #navbar li a:visited {
-  color: #ff0;
+  color: black;
   text-decoration-line: none;
 }
 
 #navbar li a:hover, #nav-box .button:hover, #nav-box .button:active {
-  text-decoration-line: overline;
+  text-decoration: underline dotted;
   color: #F77E14;
 }
 
@@ -190,7 +210,7 @@ h1, h2, p, footer {
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form, .navbar-inverse {
-  border-color: #ff0;
+  border-color: #F77E14;
 }
 
 // .navbar-inverse .navbar-nav>.active>a:visited, .navbar-inverse .dropdown-menu>.active>a:visited, .navbar-inverse .navbar-nav>.active>#dropdown:visited {
@@ -315,14 +335,26 @@ footer span {
 }
 
 h1 {
-  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+  font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
   color: #F77E14;
   font-size: calc(2em + 2.3vw);
 }
 
-h2 {
-  font-family: 'Cousine', Arial Black, Impact, sans-serif;
+.main-jumbotron>h1 {
+  font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
+  color: #F77E14;
+  font-size: calc(2.4em + 3vw);
+}
+
+h6 {
+  font-family: 'Codystar', Arial Black, Impact, sans-serif;
   font-size: calc(1.2em + 2vw);
+  font-weight: 900;
+}
+
+h2 {
+  font-family: 'Bungee Inline', Arial Black, Impact, sans-serif;
+  font-size: calc(1em + 1.6vw);
 }
 
 p {
@@ -332,21 +364,21 @@ p {
 
 .mdmix>a {
   font-size: calc(0.6em + 2.3vw);
-  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+  font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
 }
 
 .nav a, #dropdownMenu1 {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
-  font-size: calc(1.9em + 1.3vw);
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
+  font-size: calc(0.5em + 1.3vw);
 }
 
 #caption {
-  font-family: 'Monofett', Arial Black, Impact, sans-serif;
+  font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(1.9em + 3.6vw);
 }
 
 footer {
-  font-family: 'Syncopate', Arial Black, Futura, sans-serif;
+  font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
   font-size: 1.3em;
 }
 
@@ -507,7 +539,7 @@ footer {
     padding-top: 15vh;
   }
   #form-shape {
-    margin-left: 32.5vw;
+    margin-left: 20.9vw;
   }
   #navbar li a:link, #nav-box .button:link, #navbar li a:visited {
     bottom: 0;
@@ -554,7 +586,7 @@ footer {
     padding-top: 7em;
   }
   #form-shape {
-    margin-left: 37.5vw;
+    margin-left: 25.6vw;
   }
   h5 {
     position: relative;
