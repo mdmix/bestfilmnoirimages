@@ -275,15 +275,16 @@ h3, #product-title, #caption {
   text-align: center;
 }
 
-#new-products>a:hover {
-  color: #F77E14;
+#new-products>a:link, #new-products>a:visited {
+  color: #000;
   transition: 0.6s;
   -webkit-transition: 0.6s;/* Safari */
 }
 
-#new-products>a:visited {
-  color: #fff;
+#new-products>a:hover {
+  color: #F77E14;
   transition: 0.6s;
+  text-decoration-line: none;
   -webkit-transition: 0.6s;/* Safari */
 }
 
@@ -291,6 +292,16 @@ h3, #product-title, #caption {
   width: 76%;
   margin: 0 auto;
   background-color: whitesmoke;
+}
+
+.new-and-all>.new-all-hr {
+  width: 99%;
+  margin: 0 auto;
+  border-width: 0.4em;
+  border-style: dotted;
+  border-color: #F77E14;
+  padding-bottom: 0;
+  border-top-color: #F77E14;
 }
 
 label {
@@ -335,7 +346,8 @@ input, textarea {
 }
 
 #new-products>a {
-  margin-right: 0.5vw;
+  position: relative;
+  top: 0.19em;
 }
 
 h4 {
@@ -486,7 +498,7 @@ font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
 }
 
 #new-products>a {
-  font-family: 'Monoton', Arial Black, Impact, sans-serif;
+  font-family: 'Bungee Shade', Arial Black, Impact, sans-serif;
   font-size: calc(1.9em + 3.9vw);
 }
 

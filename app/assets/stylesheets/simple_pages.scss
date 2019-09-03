@@ -179,7 +179,7 @@ h2 {
 /*NAVBAR LOOK*/
 
 #navbar li a:link, #nav-box .button:link, #navbar li a:visited {
-  color: #ff0;
+  color: #000;
   text-decoration-line: none;
   bottom: 1vh;
 }
@@ -190,9 +190,9 @@ h2 {
 //   bottom: 1vh;
 // }
 
-#navbar li a:active, #navbar li a:visited {
-  color: black;
-  text-decoration-line: none;
+#navbar li a:active {
+  color: whitesmoke;
+  // text-decoration-line: none;
 }
 
 #navbar li a:hover, #nav-box .button:hover, #nav-box .button:active {
@@ -201,7 +201,7 @@ h2 {
 }
 
 #navbar li a:focus, #nav-box .button:focus {
-  color: #FFE5CC;
+  color: whitesmoke;
 }
 
 #nav-box>ul {
@@ -266,8 +266,8 @@ h2 {
 #navbar li a, #dropdownMenu1 {
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  transition: 2s;
-  -webkit-transition: 2s;/* Safari */
+  transition: 1s;
+  -webkit-transition: 1s;/* Safari */
 }
 
 .navbar-collapse {
