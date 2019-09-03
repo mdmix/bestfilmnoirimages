@@ -186,12 +186,12 @@ table {
 }
 
 .check-box {
-  width: fit-content;
+  width: min-content;
 }
 
 #search-label {
   display: block;
-  width: fit-content;
+  width: max-content;
   text-align: center;
 }
 
