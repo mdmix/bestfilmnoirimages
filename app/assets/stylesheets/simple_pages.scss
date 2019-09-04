@@ -10,8 +10,10 @@
 body {
   height: 100%;
   margin: 0;
-  background-color: #000;
-  background-image: url("https://www.transparenttextures.com/patterns/dotnoise-light-grey.png");
+  // background-color: #ff0;
+  // background-image: url("https://media.giphy.com/media/1NUQOmilp3t4jF0wqR/giphy.gif");
+  background-image: url("https://media.giphy.com/media/YRcXl6VfNhCorklI0R/giphy.gif");
+  background-repeat:repeat;
   // background-image: url("https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png");
   // background-image: url("https://www.transparenttextures.com/patterns/subtle-grey.png");
 }
@@ -357,8 +359,13 @@ h2 {
   font-size: calc(1em + 1.6vw);
 }
 
-p {
-  font-family: 'Fugaz One', Arial Black, Impact, sans-serif;
+p, .clicks {
+  font-family: 'Righteous', Arial Black, Impact, sans-serif;
+  font-size: calc(0.8em + 1.3vw);
+}
+
+.clicks {
+  font-family: 'Bungee Inline', Arial Black, Impact, sans-serif;
   font-size: calc(0.8em + 1.3vw);
 }
 

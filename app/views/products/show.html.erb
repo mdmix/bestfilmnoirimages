@@ -7,52 +7,61 @@
 <br>
 
 <!-- <#% logger.debug "This product is up" %> -->
-<section class="product-info-background" data-product-id="<%= @product.id %>">
+<section class="products-background" data-product-id="<%= @product.id %>">
 
 <% cache @product do %>
   <p class="newly-created">
-    <strong class="product-header">Pic:</strong>
+    <!-- <strong class="product-header">Pic:</strong> -->
     <br>
     <span class="product-input"><%= image_tag(@product.image_url, class: "img-zoom img-responsive products-pix", data_zoom_image: 'image_tag(@product.big_image_url)' ) unless @product.image_url.nil? %></span>
     <!-- also possible: 'image_tag(@product.image_url(:large))' -->
   </p>
 
-  <p>Clicks: <span class="badge"><%= @product.views %></span></p>
+  <p class="clicks">Clicks: <span class="badge"><%= @product.views %></span></p>
+
+  <p class="newly-created">
+    <!-- <strong class="product-header">Name:</strong> -->
+    <br>
+    <span class="product-input image-title"><%= @product.name %></span>
+  </p>
 
   <hr class="pix-lines">
 
+<div id="blowup-details-background">
   <p class="newly-created">
-    <strong class="product-header">Name:</strong>
+    <!-- <strong class="product-header">Description:</strong> -->
+    <span class="product-input" id="image-description"><%= @product.description %></span>
     <br>
-    <span class="product-input"><%= @product.name %></span>
+    <br>
   </p>
 
-  <p class="newly-created">
-    <strong class="product-header">Description:</strong>
-    <br>
-    <span class="product-input"><%= @product.description %></span>
-  </p>
+<hr class="blowup-hr">
 
   <p class="newly-created">
-    <strong class="product-header">Colour:</strong>
+    <!-- <strong class="product-header">Colour:</strong> -->
+    <span class="product-input" id="image-colour"><%= @product.colour %></span>
     <br>
-    <span class="product-input"><%= @product.colour %></span>
+    <br>
   </p>
 
-  <p class="newly-created">
-    <strong class="product-header">Price:</strong>
-    <br>
-    <span class="product-input">$<%= @product.price %></span>
-  </p>
+<hr class="blowup-hr">
 
   <p class="newly-created">
-    <%= link_to "Add to Cart", add_to_cart_path(@product), method: :put %>
-    <%= form_with(url: '/payments/create', id: "pay-button") do |form| %>
-      <%= render partial: "devise/shared/stripe_checkout_button" %>
-      <%= hidden_field_tag(:product_id, @product.id) %>
-      <%= hidden_field_tag(:product_name, @product.name) %>
-    <% end %>
+    <!-- <strong class="product-header">Price:</strong> -->
+    <span class="product-input" id="image-price">$<%= @product.price %></span>
+    <br>
+    <br>
   </p>
+</div>
+
+  <!-- <p class="newly-created">
+    <#%= link_to "Add to Cart", add_to_cart_path(@product), method: :put %>
+    <#%= form_with(url: '/payments/create', id: "pay-button") do |form| %>
+      <#%= render partial: "devise/shared/stripe_checkout_button" %>
+      <#%= hidden_field_tag(:product_id, @product.id) %>
+      <#%= hidden_field_tag(:product_name, @product.name) %>
+    <#% end %>
+  </p> -->
   <br>
   <p class="newly-created" id="reviews">
     <strong class="product-header" id="reviews-header">Reviews – range:</strong>
