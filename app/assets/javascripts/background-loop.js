@@ -1,18 +1,18 @@
 $(document).on('turbolinks:load', function () {
 
     function slider(){
-        $('.products-background').delay(6000).fadeOut(0, function() {
+        $('.products-background').delay(7600).fadeOut(125, function() {
             $('.products-background').css("background-image", "url(https://www.transparenttextures.com/patterns/asfalt-dark.png)");
-            $('.products-background').fadeIn(0, function() {
-                $('.products-background').delay(6000).fadeOut(0, function() {
+            $('.products-background').fadeIn(125, function() {
+                $('.products-background').delay(7600).fadeOut(125, function() {
                     $('.products-background').css("background-image", "url(https://media.giphy.com/media/1mlonxGBYtudG/giphy.gif)");
-            $('.products-background').fadeIn(0, function() {
-                $('.products-background').delay(6000).fadeOut(0, function() {
+            $('.products-background').fadeIn(1000, function() {
+                $('.products-background').delay(7600).fadeOut(125, function() {
                     $('.products-background').css("background-image", "url(https://media.giphy.com/media/w4Kzsq7dfzDyM/giphy.gif)");
-            $('.products-background').fadeIn(0, function() {
-                $('.products-background').delay(6000).fadeOut(0, function() {
+            $('.products-background').fadeIn(125, function() {
+                $('.products-background').delay(7600).fadeOut(125, function() {
                     $('.products-background').css("background-image", "url(https://media.giphy.com/media/TAFAUhoT7xOhi/giphy.gif)");
-            $('.products-background').fadeIn(0, slider);
+            $('.products-background').fadeIn(125, slider);
               });
             });
           });
