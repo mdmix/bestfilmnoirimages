@@ -1,3 +1,5 @@
+<body class="blowup-body">
+
 <br>
 <br>
 
@@ -7,13 +9,13 @@
 <br>
 
 <!-- <#% logger.debug "This product is up" %> -->
-<section class="products-background" data-product-id="<%= @product.id %>">
+<section class="blowup-background" data-product-id="<%= @product.id %>">
 
 <% cache @product do %>
   <p class="newly-created">
     <!-- <strong class="product-header">Pic:</strong> -->
     <br>
-    <span class="product-input"><%= image_tag(@product.image_url, class: "img-zoom img-responsive products-pix", data_zoom_image: 'image_tag(@product.big_image_url)' ) unless @product.image_url.nil? %></span>
+    <span class="product-input"><%= image_tag(@product.image_url, class: "img-responsive products-pix", data_zoom_image: 'image_tag(@product.big_image_url)' ) unless @product.image_url.nil? %></span>
     <!-- also possible: 'image_tag(@product.image_url(:large))' -->
   </p>
 
@@ -54,16 +56,16 @@
   </p>
 </div>
 
-  <!-- <p class="newly-created">
-    <#%= link_to "Add to Cart", add_to_cart_path(@product), method: :put %>
-    <#%= form_with(url: '/payments/create', id: "pay-button") do |form| %>
+  <p class="newly-created add-jumbotron jumbotron">
+    <%= link_to "Add to Cart", add_to_cart_path(@product), method: :put, :class => "add-cart" %>
+    <!-- <#%= form_with(url: '/payments/create', id: "pay-button") do |form| %>
       <#%= render partial: "devise/shared/stripe_checkout_button" %>
       <#%= hidden_field_tag(:product_id, @product.id) %>
       <#%= hidden_field_tag(:product_name, @product.name) %>
-    <#% end %>
-  </p> -->
-  <br>
+    <#% end %> -->
+  </p>
   <p class="newly-created" id="reviews">
+    <br></br>
     <strong class="product-header" id="reviews-header">Reviews – range:</strong>
     <br>
     <div id="ratings-range">
@@ -79,7 +81,7 @@
           <span>Lowest<br>
             <span class="numerical-ratings"><%= @product.lowest_rating_comment&.rating %><br></span></span></b>
         </span>
-        <br>
+        <br></br>
     </div>
   </p>
 
@@ -112,3 +114,5 @@
   <%= link_to 'Edit', edit_product_path(@product), :class => "links-show" %> |
   <%= link_to 'Back', products_path, :class => "links-show" %>
 </div>
+
+</body>

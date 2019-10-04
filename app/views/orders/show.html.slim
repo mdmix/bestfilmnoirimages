@@ -1,0 +1,25 @@
+body.order-body
+
+  .container
+    .row
+      table.table
+        thead
+          th.cart-details Name
+          th.cart-details Price
+          th.cart-details Quantity
+          th.cart-details Subtotal
+        tbody
+            tr
+              td.align-middle.cart-contents = @order.product.name
+              td.align-middle.cart-contents
+                | $#{@order.product.price}
+              td.align-middle.cart-contents = @order.quantity
+              td.align-middle.cart-contents
+                | $#{@order.product.price * @order.quantity.to_i}
+
+            tr.font-weight-bold
+            td.checkout-cells colspan="2"
+              h5.checkout-details Total
+            td.checkout-cells colspan="2"
+              h5.checkout-details colspan="1"
+                | $#{@order_total}

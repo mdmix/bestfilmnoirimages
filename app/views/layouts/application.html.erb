@@ -10,7 +10,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade|Codystar|Fugaz+One|Monoton|Abril+Fatface|Bungee+Inline|Righteous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -70,15 +70,15 @@
         </div><!-- navbar header -->
         <div class="navbar-collapse collapse nav-box" id="nav-box">
           <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Slideshow", simple_pages_landing_page_path %></li>
+            <li><%= link_to "Categories", categories_path %></li>
           <% if user_signed_in? %>
             <li><%= link_to 'Cart (' + "#{current_user.cart_count}" + ')', cart_path %></li>
           <% else %>
             <li><%= link_to 'Cart (0)', cart_path %></li>
           <% end %>
-            <li><%= link_to "Categories", categories_path %></li>
-            <li><%= link_to "Contact", simple_pages_contact_path %></li>
-            <li><%= link_to "Slideshow", simple_pages_landing_page_path %></li>
             <li><%= link_to "Orders", orders_path %></li>
+            <li><%= link_to "Contact", simple_pages_contact_path %></li>
           </ul>
         </div><!-- end nav -->
         <%= form_with(url: products_path, method: 'get', local: true, id:"search-form-wide") do |form| %>

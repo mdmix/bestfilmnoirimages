@@ -19,5 +19,9 @@ var refreshRating = function() {
 $(document).on('turbolinks:load ajaxSuccess', function() {
     refreshRating();
 
-    $('.img-zoom').elevateZoom({tint:true, tintColour:'#F77E14', tintOpacity:0.84});
+    $('.img-zoom').elevateZoom({
+      zoomType: "lens",
+      lensShape: "round",
+      lensSize: 400
+    });
 });

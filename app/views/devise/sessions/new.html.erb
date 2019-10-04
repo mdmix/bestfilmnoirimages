@@ -1,4 +1,6 @@
-<h2>Log in</h2>
+<div id="content-wrap">
+
+<h2 id="login-title">Log in</h2>
 
 <%= form_for(resource, as: resource_name, html: {id: "log-in"}, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -23,6 +25,8 @@
   </div>
 <% end %>
 
-<div class="access-click">
+<div class="access-click login-bottom-links">
   <%= render "devise/shared/links" %>
+</div>
+
 </div>

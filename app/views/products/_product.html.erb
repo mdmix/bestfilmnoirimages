@@ -1,17 +1,28 @@
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 products-display">
   <% cache product do %>
     <div class="products-background">
-      <br></br>
-      <%= image_tag(product.image_url, class: "img-responsive products-pix") unless product.image_url.nil? %>
+      <p class="hover-zoom">HOVER TO ZOOM</p>
+      <!-- <br> -->
+      <%= image_tag(product.image_url, class: "img-zoom img-responsive products-pix", data_zoom_image: 'image_tag(@product.big_image_url)') unless product.image_url.nil? %>
       <h3><%= link_to "#{product.name}", product, id: "product-title" %></h3>
+
       <hr class="hr-details">
+
       <div id="details-background">
         <p class="products-details" id="description"><%= product.description %></p>
         <p class="products-details" id="colour"><%= product.colour %></p>
         <strong><p class="products-details" id="price">€<%= product.price %></p></strong>
         <br>
       </div>
+
       <hr class="hr-details">
+
+      <p class="add-jumbotron jumbotron overview-add">
+        <%= link_to "Add to Cart", add_to_cart_path(product), method: :put, :class => "add-cart add-cart-overview" %>
+      </p>
+
+      <hr class="hr-details">
+
       <span class="links-products"><%= link_to 'Blow Up', product %></span>
       <span class="links-products"><%= link_to 'Edit', edit_product_path(product) %></span>
       <span class="links-products"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>

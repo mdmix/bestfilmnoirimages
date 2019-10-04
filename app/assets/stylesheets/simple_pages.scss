@@ -7,6 +7,11 @@
 //   margin: 0;
 // }
 
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -16,6 +21,19 @@ body {
   background-repeat:repeat;
   // background-image: url("https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png");
   // background-image: url("https://www.transparenttextures.com/patterns/subtle-grey.png");
+}
+
+.blowup-body, .cart-body, .order-body {
+  // background-color: pink;
+  background-image: url("https://media.giphy.com/media/hSLDN6zfh2Yy4ekMWi/giphy.gif");
+}
+
+.contact-body {
+  background-image: url("https://media.giphy.com/media/YEJ4sXALpLwjK/giphy.gif");
+}
+
+.slideshow-body {
+  background-image: url("https://media.giphy.com/media/ytQUltlWbO6OI/giphy.gif");
 }
 
 .user-porthole {
@@ -34,8 +52,8 @@ body {
 }
 
 .alert-warning {
-  background-color: #F77E14;
-  color: #5AD4C2;
+  background-color: #000;
+  color: whitesmoke;
 }
 
 .alert-info {
@@ -79,11 +97,25 @@ body {
 
 .carousel-inner>.item, .carousel-inner {
   text-align: center;
-  background-color: #5AD4C2;
+  // background-color: #5AD4C2;
+  background-image: url("https://media.giphy.com/media/l4KhYZdAP6gNZJSEM/giphy.gif");
+  background-repeat:repeat;
   height: 79vw;
 }
 
+#carousel-example-generic {
+  position: relative;
+  bottom: 11em;
+  margin-top: 39em;
+}
+
+#slideshow-title {
+  position: relative;
+  top: 1.4em;
+}
+
 .page-wrap {
+  position: relative;
   min-height: 100%;
   height: auto;
   /* equal to footer height */
@@ -94,6 +126,11 @@ body {
 .page-wrap:after {
   content: "";
   display: block;
+}
+
+#content-wrap {
+  min-height: inherit;
+  padding-bottom: 2.5em;
 }
 
 #navbar {
@@ -140,6 +177,10 @@ h2 {
   color: #000;
 }
 
+#login-title, #signup-title, #min-password {
+  color: whitesmoke;
+}
+
 .main-jumbotron {
   background-color: whitesmoke;
   width: 76%;
@@ -151,6 +192,18 @@ h2 {
 .model-jumbotron {
   background-color: #000;
   color: white;
+}
+
+.add-jumbotron {
+  background-color: whitesmoke;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.overview-add {
+  padding: 0.4em;
+  color: #ff0;
+  background-color: #000;
 }
 
 .mdmix>a {
@@ -307,6 +360,10 @@ h1, p {
   margin: 0 auto;
 }
 
+.hover-zoom {
+  color: whitesmoke;
+}
+
 footer, .page-wrap:after {
   height: 2.5em;
 }
@@ -340,6 +397,7 @@ h1 {
   font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;
   color: #F77E14;
   font-size: calc(2em + 2.3vw);
+  font-weight: 900;
 }
 
 .main-jumbotron>h1 {
@@ -351,6 +409,12 @@ h1 {
 h6 {
   font-family: 'Codystar', Arial Black, Impact, sans-serif;
   font-size: calc(1.2em + 2vw);
+  font-weight: 900;
+}
+
+.hover-zoom {
+  font-family: 'Codystar', Arial Black, Impact, sans-serif;
+  font-size: calc(1em + 1.4vw);
   font-weight: 900;
 }
 

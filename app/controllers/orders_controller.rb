@@ -10,6 +10,10 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    # @cart_products_with_qty = current_user.get_cart_products_with_qty
+    # @order_products_with_qty = current_user.get_order_products_with_qty
+    # @order_total = current_user.order_total_price
+    # @quantity = Order.find(params[:id])
     # byebug
   end
 

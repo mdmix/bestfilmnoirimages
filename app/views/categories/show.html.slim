@@ -1,5 +1,9 @@
-h1.jumbotron Shopping App | #{ @category.name }
+h1.jumbotron Category | #{ @category.name }
 
-.container
-  .row
+.container-fluid.products-overview
+  .row.products-row
+    - cache(cache_key_for_products) do
     = render partial: "products/product", collection: @products
+
+.pages-frame
+  = will_paginate @products, :previous_label => '←', :next_label => '→'

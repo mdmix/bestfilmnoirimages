@@ -1,49 +1,55 @@
-<br>
-<!-- <p id="notice"><#%= notice %></p> -->
+<body class="overview-background">
 
-<br>
-
-<!-- <#%= params[:example_key].to_i * 10 %> -->
-
-<br>
-
-<div class="jumbotron main-jumbotron">
-  <h1>Stand-Out<br>Film Noir Images</h1>
-
-  <h6 class="jumbotron model-jumbotron">Model E-Commerce Site</h6>
   <br>
-  <br>
-  <h2>Your hub for all major posters, snapshots </h2>
-  <h2>And more coming soon </h2>
-  <br>
-</div>
+  <!-- <p id="notice"><#%= notice %></p> -->
 
-<br class="titles-spread">
-<br class="titles-spread">
-<br class="titles-spread">
-<br>
-<br>
-<!-- <hr> -->
-<div class="new-and-all jumbotron">
-  <div id="new-products">
-    <%= link_to 'New Product', new_product_path %>
+  <br>
+
+  <!-- <#%= params[:example_key].to_i * 10 %> -->
+
+  <br>
+
+  <div class="jumbotron main-jumbotron">
+    <h1>Stand-Out<br>Film Noir Images</h1>
+
+    <h6 class="jumbotron model-jumbotron">Model E-Commerce Site</h6>
+    <br>
+    <br>
+    <h2>Your hub for all major posters, snapshots </h2>
+    <h2>And more coming soon </h2>
+    <br>
   </div>
-  <br></br>
-  <br>
-  <hr class="new-all-hr">
-  <!-- <br> -->
-  <h5>All Products</h5>
-  <br>
-</div>
 
-<div class="container-fluid products-overview">
-  <div class="row products-row">
-  <% cache(cache_key_for_products) do %>
-    <%= render @products %>
-  <% end %>
+  <br class="titles-spread">
+  <br class="titles-spread">
+  <br class="titles-spread">
+  <br>
+  <br>
+  <!-- <hr> -->
+  <div class="new-and-all jumbotron">
+    <div id="new-products">
+      <%= link_to 'New Product', new_product_path %>
+    </div>
+    <br></br>
+    <br>
+    <hr class="new-all-hr">
+    <!-- <br> -->
+    <h5>All Products</h5>
+    <br>
   </div>
-</div>
 
-<div class="pages-frame">
-  <%= will_paginate @products, :previous_label => '←', :next_label => '→' %>
-</div>
+  <div class="container-fluid products-overview">
+    <div class="row products-row">
+    <% cache(cache_key_for_products) do %>
+      <%= render @products %>
+    <% end %>
+    </div>
+  </div>
+
+  <br>
+  
+  <div class="pages-frame">
+    <%= will_paginate @products, :previous_label => '←', :next_label => '→' %>
+  </div>
+
+</body>
