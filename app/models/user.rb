@@ -14,9 +14,9 @@ class User < ActiveRecord::Base
     # @cart = Cart.find(params[:id])
   end
 
-  def current_user_shipment
-    cart_id = @shipment_id
-  end
+  # def current_user_shipment
+  #   Order.last...
+  # end
 
   def add_to_cart(product_id)
     $redis.hincrby current_user_cart, product_id, 1
@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
 
   def purchase_cart_products!
     get_cart_products_with_qty.map do |product, qty|
-      self.orders.create(shipment_id: current_user_shipment, user: self, product: product, quantity: qty, total: product.price * qty.to_i)
+      self.orders.create(user: self, product: product, quantity: qty, total: product.price * qty.to_i)
     end
     $redis.del current_user_cart
   end

@@ -11,18 +11,19 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      @products = Product.search(search_term).paginate(:page => params[:page]).per_page(2)
+      @products = Product.search(search_term).paginate(:page => params[:page]).per_page(6)
     else
       @products = Product.all
     end
-    @products = @products.paginate(:page => params[:page], :per_page => 2)
+    @products = @products.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
     @product.viewed!
-    @comments = @product.comments.order('created_at DESC').paginate(:page => params[:page], :per_page => 2)
+    @comments = @product.comments.order('created_at DESC').paginate(:page => params[:page], :per_page => 5)
+    # @product = Product.find(params[:id])
     # byebug
   end
 

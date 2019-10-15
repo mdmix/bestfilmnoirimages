@@ -12,78 +12,7 @@
 <section class="blowup-background" data-product-id="<%= @product.id %>">
 
 <!-- <#% cache @product do %> -->
-  <p class="newly-created">
-    <!-- <strong class="product-header">Pic:</strong> -->
-    <br>
-    <span class="product-input"><%= image_tag(@product.image_url, class: "img-responsive products-pix", data_zoom_image: 'image_tag(@product.big_image_url)' ) unless @product.image_url.nil? %></span>
-    <!-- also possible: 'image_tag(@product.image_url(:large))' -->
-  </p>
-
-  <p class="clicks">Clicks: <span class="badge"><%= @product.views %></span></p>
-
-  <p class="newly-created">
-    <!-- <strong class="product-header">Name:</strong> -->
-    <br>
-    <span class="product-input image-title"><%= @product.name %></span>
-  </p>
-
-  <hr class="pix-lines">
-
-<div id="blowup-details-background">
-  <p class="newly-created">
-    <!-- <strong class="product-header">Description:</strong> -->
-    <span class="product-input" id="image-description"><%= @product.description %></span>
-    <br>
-    <br>
-  </p>
-
-<hr class="blowup-hr">
-
-  <p class="newly-created">
-    <!-- <strong class="product-header">Colour:</strong> -->
-    <span class="product-input" id="image-colour"><%= @product.colour %></span>
-    <br>
-    <br>
-  </p>
-
-<hr class="blowup-hr">
-
-  <p class="newly-created">
-    <!-- <strong class="product-header">Price:</strong> -->
-    <span class="product-input" id="image-price">$<%= @product.price %></span>
-    <br>
-    <br>
-  </p>
-</div>
-
-  <p class="newly-created add-jumbotron jumbotron">
-    <%= link_to "Add to Cart", add_to_cart_path(@product), method: :put, :class => "add-cart" %>
-    <!-- <#%= form_with(url: '/payments/create', id: "pay-button") do |form| %>
-      <#%= render partial: "devise/shared/stripe_checkout_button" %>
-      <#%= hidden_field_tag(:product_id, @product.id) %>
-      <#%= hidden_field_tag(:product_name, @product.name) %>
-    <#% end %> -->
-  </p>
-  <p class="newly-created" id="reviews">
-    <br></br>
-    <strong class="product-header" id="reviews-header">Reviews – range:</strong>
-    <br>
-  </p>
-    <div id="ratings-range">
-      <p>Average Rating:</p><div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div>
-      <br>
-        <span class="reviews-text">
-          <b>
-          <i class="fas fa-user-secret"></i>
-          <span>Highest<br>
-            <span class="numerical-ratings"><%= @product.highest_rating_comment&.rating %></span></span>
-          <br>
-          <i class="fas fa-user-secret"></i>
-          <span>Lowest<br>
-            <span class="numerical-ratings"><%= @product.lowest_rating_comment&.rating %><br></span></span></b>
-        </span>
-        <br></br>
-    </div>
+<%= render 'blowup' %>
 <!-- <#% end %> -->
 
 </section>
@@ -110,8 +39,10 @@
 <br>
 
 <div class="links-combo">
-  <%= link_to 'Edit', edit_product_path(@product), :class => "links-show" %> |
-  <%= link_to 'Back', products_path, :class => "links-show" %>
+  <% if current_user && current_user.admin? %>
+    <%= link_to 'Edit', edit_product_path(@product), :class => "links-show" %>
+  <% end %>
+  <%= link_to 'Home', products_path, :class => "links-show" %>
 </div>
 
 </body>

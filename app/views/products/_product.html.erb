@@ -24,8 +24,10 @@
       <hr class="hr-details">
 
       <span class="links-products"><%= link_to 'Blow Up', product %></span>
-      <span class="links-products"><%= link_to 'Edit', edit_product_path(product) %></span>
-      <span class="links-products"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% if current_user && current_user.admin? %>
+        <span class="links-products"><%= link_to 'Edit', edit_product_path(product) %></span>
+        <span class="links-products"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% end %>
       <br></br>
       <br></br>
       <br></br>

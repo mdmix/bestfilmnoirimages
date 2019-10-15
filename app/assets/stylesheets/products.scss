@@ -69,6 +69,12 @@ h5 {
   color: #ff0;
 }
 
+.newly-created .add-cart:hover {
+  text-decoration: underline dashed;
+  text-underline-position: under;
+  color: #F77E14;
+}
+
 .add-cart-overview, .add-cart-overview:visited {
   color: whitesmoke;
 }
@@ -99,9 +105,9 @@ form>.stripe-button-el>span {
   text-align: center;
 }
 
-#average-rating {
-  filter: saturate(0%);
-}
+// #average-rating {
+//   filter: saturate(0%);
+// }
 
 .numerical-ratings {
   position: relative;
@@ -505,7 +511,7 @@ h4 {
 }
 
 .orders-frame {
-  padding-bottom: 0.9em;
+  padding-bottom: 12.9em;
 }
 
 .orders-overview {
@@ -513,18 +519,37 @@ h4 {
 }
 
 .orders-details {
-  background-color: #ff0;
+  // background-color: #ff0;
+  background-image: url("https://media.giphy.com/media/wdfxqCQVGHDlC/giphy.gif");
   width: 73%;
   margin: 0 auto;
   padding-top: 0.2em;
 }
 
-.orders-numbers, .orders-names:visited {
-  color: #5AD4C2;
+#orders-numbers, #orders-prints, #orders-timestamps {
+  color: whitesmoke;
 }
 
-.orders-names, #orders-prices {
-  color: #F77E14;
+#orders-numbers {
+  margin-bottom: 0.6em;
+}
+
+#orders-names, #orders-names>a:visited, #orders-prices {
+  color: #ff0;
+}
+
+#orders-names {
+  transition: all 0.9s ease;
+  -webkit-transition: all 0.9s ease;
+  text-decoration-line: none;
+}
+
+#orders-names:hover {
+  font-size: calc(1.4em + 2vw);
+}
+
+.orders-headings {
+  text-transform: uppercase;
 }
 
 .order-header {
@@ -546,8 +571,16 @@ hr {
   color: #ff0;
 }
 
+.hr-orders {
+  color: #ff0;
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+  border-top: dotted;
+  width: 54%;
+}
+
 .form-line {
-  width: 73%;
+  width: 74%;
   margin-left: 0;
   margin-top: 0.6em;
   margin-bottom: 0.6em;
@@ -571,9 +604,14 @@ hr {
 
 /* Typography */
 
-th, #orders-descriptions, #orders-prices, .cancel-text, #unhappy-text {
+th, #orders-prints, #orders-timestamps, #orders-prices, .cancel-text, #unhappy-text {
   font-family: 'Righteous', Arial Black, Impact, sans-serif;
-  font-size: calc(0.6em + 1.1vw);
+  font-size: calc(0.7em + 1.1vw);
+}
+
+.orders-headings {
+  font-family: 'Righteous', Arial Black, Impact, sans-serif;
+  font-size: calc(0.3em + 0.6vw);
 }
 
 .cart-contents {
@@ -596,8 +634,8 @@ th, #orders-descriptions, #orders-prices, .cancel-text, #unhappy-text {
   font-size: calc(0.7em + 0.9vw);
 }
 
-.newly-created, .actions, h4, .orders-numbers, .order-info, .field-input, #product-title, form>.stripe-button-el>span {
-  font-size: calc(0.6em + 1.8vw);
+.newly-created, .actions, h4, #orders-numbers, .order-info, .field-input, #product-title, form>.stripe-button-el>span {
+  font-size: calc(0.4em + 1.6vw);
   font-family: 'Bungee Shade', Arial Black, Impact, sans-serif;
 }
 
@@ -678,9 +716,9 @@ font-family: 'Bungee Shade', Arial Black, Impact, sans-serif;
   font-size: calc(1.3em + 1.9vw);
 }
 
-.orders-names {
+#orders-names {
   font-family: 'Monoton', Arial Black, Impact, sans-serif;
-  font-size: calc(1.1em + 1.9vw);
+  font-size: calc(1em + 1.6vw);
 }
 
 #new-products>a {
@@ -691,6 +729,10 @@ font-family: 'Bungee Shade', Arial Black, Impact, sans-serif;
 a, .previous_page, .current {
   font-family: 'Monoton', Arial Black, Impact, sans-serif;
   font-size: calc(1.6em + 1.9vw);
+}
+
+.categories-links {
+  font-weight: 900;
 }
 
 .signup-bottom-links {

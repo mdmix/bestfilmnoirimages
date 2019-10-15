@@ -36,6 +36,11 @@ body {
   background-image: url("https://media.giphy.com/media/ytQUltlWbO6OI/giphy.gif");
 }
 
+.order-body {
+  // background-color: pink;
+  background-image: url("https://media.giphy.com/media/JqDVgroowQy4sYgqjp/giphy.gif");
+}
+
 .user-porthole {
   // list-style-position: inside;
   list-style-type: none;
@@ -112,6 +117,7 @@ body {
 #slideshow-title {
   position: relative;
   top: 1.4em;
+  width: 63%;
 }
 
 .page-wrap {
@@ -194,6 +200,12 @@ h2 {
   color: white;
 }
 
+.categories-jumbotron {
+  width: fit-content;
+  color: #F77E14;
+  background-color: whitesmoke;
+}
+
 .add-jumbotron {
   background-color: whitesmoke;
   margin: 0 auto;
@@ -204,6 +216,12 @@ h2 {
   padding: 0.4em;
   color: #ff0;
   background-color: #000;
+}
+
+.cart-jumbotron {
+  width: fit-content;
+  color: #000;
+  background-color: whitesmoke;
 }
 
 .mdmix>a {
@@ -399,6 +417,10 @@ h1 {
   font-size: calc(2em + 2.3vw);
   font-weight: 900;
 }
+
+// #slideshow-title {
+//   font-size: calc(2.6em + 2.9vw);
+// }
 
 .main-jumbotron>h1 {
   font-family: 'Bungee Shade', Arial Black, Futura, sans-serif;

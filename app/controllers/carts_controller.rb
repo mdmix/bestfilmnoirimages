@@ -5,7 +5,6 @@ class CartsController < ApplicationController
   def show
     @cart_products_with_qty = current_user.get_cart_products_with_qty
     @cart_total = current_user.cart_total_price
-    # @cart = Cart.find(params[:cart_id])
   end
 
   def add
