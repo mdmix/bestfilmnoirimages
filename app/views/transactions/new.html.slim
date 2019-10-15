@@ -1,9 +1,14 @@
-h1.jumbotron Checkout
+body.payment-body
+
+h1.jumbotron.checkout-jumbotron Checkout
+
+br
 
 .container.card.p-5
   h2#new-transaction New Transaction
   = form_tag transactions_path do
     p#payment-details Please enter your payment details:
+    p#test-details test – card: 4111 1111 1111 1111 / expiry: in the future
     #dropin
     p#payment-submit
       = submit_tag "Pay $ #{current_user.cart_total_price}"
