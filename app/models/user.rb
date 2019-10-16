@@ -53,7 +53,7 @@ class User < ActiveRecord::Base
   def purchase_cart_products!
     get_cart_products_with_qty.map do |product, qty|
       self.orders.create(user: self, product: product, quantity: qty, total: product.price * qty.to_i)
-      UserMailer.order_placement(@user, @product, @name).deliver_now
+      UserMailer.order_placement(self, product, email).deliver_now
     end
     $redis.del current_user_cart
   end
