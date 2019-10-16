@@ -13,7 +13,7 @@ class TransactionsController < ApplicationController
         payment_method_nonce: params[:payment_method_nonce])
       if @result.success?
         current_user.purchase_cart_products!
-        flash[:notice] = "Congratulations! We'll try to get you your items as soon as possible!"
+        flash[:notice] = "All classic choices! We'll get you your prints at 'Bullitt' speed!"
         redirect_to root_url
       else
         flash[:alert] = "Hmm, something went wrong, let's try again!"
@@ -27,7 +27,7 @@ class TransactionsController < ApplicationController
 
       def check_cart!
         if current_user.get_cart_products_with_qty.blank?
-          redirect_to root_url, alert: "Please add some items to your cart before processing your transaction!"
+          redirect_to root_url, alert: "Without adding prints, you won't go anywhere"
         end
       end
 
