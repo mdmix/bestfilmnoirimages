@@ -13,7 +13,7 @@ class UserMailer < ApplicationMailer
       mail(
         :from => "max@maxdiamondmix.com",
         :to => user.email,
-        :subject => "Welcome to The Mixer zone"
+        :subject => "Welcome to The 'Stand-Out-Film-Noir-Images' zone"
       )
   end
 
@@ -24,7 +24,7 @@ class UserMailer < ApplicationMailer
       mail(
         :from => "max@maxdiamondmix.com",
         :to => user.email,
-        :subject => "Your order of #{name} is on-the-move"
+        :subject => "Your shipment of #{name} is on-the-move"
       )
   end
 
