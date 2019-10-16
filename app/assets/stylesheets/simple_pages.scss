@@ -67,16 +67,19 @@ body {
 .alert-warning {
   background-color: #000;
   color: whitesmoke;
+  text-align: center;
+  width: 73%;
+  margin: 0 auto;
 }
 
-.alert-info {
-  background-color: #ff0;
-  border-color: #F77E14;
-  border-width: 0.4em;
-  color: #F77E14;
-  text-align: center;
-  margin-bottom: 0;
-}
+// .alert-info {
+//   background-color: #ff0;
+//   border-color: #F77E14;
+//   border-width: 0.4em;
+//   color: #F77E14;
+//   text-align: center;
+//   margin-bottom: 0;
+// }
 
 .center-pic {
   width: 50%;
