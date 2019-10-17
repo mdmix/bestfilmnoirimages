@@ -24,7 +24,7 @@ class UserMailer < ApplicationMailer
       mail(
         :from => "max@maxdiamondmix.com",
         :to => user.email,
-        :subject => "Your shipment of #{product} is on-the-move"
+        :subject => "Your shipment of '#{product.name}' is on-the-move"
       )
   end
 

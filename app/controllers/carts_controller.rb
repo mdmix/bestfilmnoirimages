@@ -9,7 +9,7 @@ class CartsController < ApplicationController
 
   def add
     current_user.add_to_cart(params[:product_id])
-    redirect_to cart_path
+    redirect_to request.referrer
   end
 
   def remove

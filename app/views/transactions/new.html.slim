@@ -11,6 +11,6 @@ br
     p#test-details test – card: 4111 1111 1111 1111 / expiry: in the future
     #dropin
     p#payment-submit
-      = submit_tag "Pay $ #{current_user.cart_total_price}"
+      = submit_tag "Pay #{number_to_currency(current_user.cart_total_price, precision: 2)}"
 br
 br

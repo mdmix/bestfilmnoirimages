@@ -36,7 +36,7 @@
 
 <p class="newly-created">
   <!-- <strong class="product-header">Price:</strong> -->
-  <span class="product-input" id="image-price">$<%= @product.price %></span>
+  <span class="product-input" id="image-price"><%= number_to_currency(@product.price, precision:2) %></span>
   <br>
   <br>
 </p>

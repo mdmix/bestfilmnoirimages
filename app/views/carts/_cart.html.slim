@@ -13,10 +13,10 @@
           tr
             td.align-middle.cart-contents = product.name
             td.align-middle.cart-contents
-              | $#{product.price}
+              | #{number_to_currency(product.price, precision: 2)}
             td.align-middle.cart-contents = qty
             td.align-middle.cart-contents
-              | $#{product.price * qty.to_i}
+              | #{number_to_currency(product.price * qty.to_i, precision: 2)}
             td.align-middle
               = link_to '+', add_to_cart_path(product), method: :put, class: "btn add-subtract"
               = link_to '–', remove_one_cart_path(product), method: :put, class: "btn add-subtract"
@@ -27,6 +27,6 @@
             h5.checkout-details Total
           td.checkout-cells colspan="2"
             h5.checkout-details colspan="1"
-              | $#{@cart_total}
+              | #{number_to_currency(@cart_total, precision: 2)}
           td.checkout-cells
             =link_to "Checkout", new_transaction_path, class: "btn btn-success checkout-details checkout-button" unless current_user.get_cart_products_with_qty.blank?

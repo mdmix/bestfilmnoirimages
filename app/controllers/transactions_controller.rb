@@ -13,7 +13,7 @@ class TransactionsController < ApplicationController
         payment_method_nonce: params[:payment_method_nonce])
       if @result.success?
         current_user.purchase_cart_products!
-        flash[:notice] = "All classic choices! We'll get you your prints at 'Bullitt' speed!"
+        flash[:notice] = "All classic choices! We'll get your prints to you at 'Bullitt' speed!"
         redirect_to root_url
       else
         flash[:alert] = "Hmm, something went wrong, let's try again!"

@@ -11,7 +11,7 @@
       <div id="details-background">
         <p class="products-details" id="description"><%= product.description %></p>
         <p class="products-details" id="colour"><%= product.colour %></p>
-        <strong><p class="products-details" id="price">€<%= product.price %></p></strong>
+        <strong><p class="products-details" id="price"><%= number_to_currency(product.price, precision: 2) %></p></strong>
         <br>
       </div>
 
