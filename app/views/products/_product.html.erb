@@ -1,13 +1,13 @@
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 products-display">
-  <% cache product do %>
+  <!-- <#% cache product do %> -->
     <div class="products-background">
       <p class="hover-zoom">HOVER TO ZOOM</p>
       <!-- <br> -->
 
       <!-- <#%= image_tag(product.image_url, class: "no-img-zoom img-responsive products-pix") unless product.image_url.nil? %> -->
-      <div id="img-magnifier">
+      <!-- <div id="img-magnifier"> -->
       <%= image_tag(product.image_url, class: "img-zoom img-responsive products-pix", width: '100', data_zoom_image: 'image_tag(@product.big_image_url)') unless product.image_url.nil? %>
-      </div>
+      <!-- </div> -->
       <h3><%= link_to "#{product.name}", product, id: "product-title" %></h3>
 
       <hr class="hr-details">
@@ -36,7 +36,7 @@
       <br></br>
       <br></br>
     </div><!-- end products-background -->
-  <% end %>
+  <!-- <#% end %> -->
   </div><!-- /col -->
   <!-- <br>
   <br> -->

@@ -658,6 +658,9 @@ footer {
   .products-background {
     min-height: 69em;
   }
+  .products-display {
+    min-height: 86.25em;
+  }
   h5 {
     position: relative;
     top: 2vh;
@@ -682,15 +685,18 @@ footer {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1435px) {
-  .products-background {
-    min-height: 69em;
-  }
-}
+// @media (min-width: 1024px) and (max-width: 1435px) {
+//   .products-background {
+//     min-height: 69em;
+//   }
+// }
 
 @media (min-width: 1440px) {
   .products-background {
     min-height: 79em;
+  }
+  .products-display {
+    min-height: 98.75em;
   }
   .label-min-password {
     top: 0.9em;
@@ -749,6 +755,9 @@ footer {
 @media (min-width: 1669px) {
   .products-background {
     min-height: 84em;
+  }
+  .products-display {
+    min-height: 105em;
   }
   .user-porthole {
     padding-top: 7em;
