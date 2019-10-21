@@ -1,7 +1,7 @@
 <p class="newly-created">
   <!-- <strong class="product-header">Pic:</strong> -->
   <br>
-  <span class="product-input"><%= image_tag(@product.image_url, class: "img-responsive products-pix", data_zoom_image: 'image_tag(@product.big_image_url)' ) unless @product.image_url.nil? %></span>
+  <span class="product-input"><%= image_tag(@product.image_url, class: "img-responsive products-pix") unless @product.image_url.nil? %></span>
   <!-- also possible: 'image_tag(@product.image_url(:large))' -->
 </p>
 

@@ -45,11 +45,11 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @product.save
         @category_array = params.dig(:product, :category_ids)
-        @category_array.each do |cat|
+        @category_array.each unless @category_array.nil? do |cat|
           @category = Category.find(cat)
           @product.categories << @category
         end
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, notice: 'Print has been added to the mix' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -63,13 +63,13 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        @product.product_categories.destroy_all
+        # @product.product_categories.destroy_all
         @category_array = params.dig(:product, :category_ids)
-        @category_array.each do |cat|
+        @category_array.each unless @category_array.nil? do |cat|
           @category = Category.find(cat)
           @product.categories << @category
         end
-        format.html { redirect_to simple_pages_landing_page_path, notice: 'Product was successfully updated.' }
+        format.html { redirect_to simple_pages_landing_page_path, notice: 'Print has been remixed' }
         format.json { render :index, status: :ok, location: @products }
       else
         format.html { render :edit }
@@ -84,7 +84,7 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
+      format.html { redirect_to products_url, notice: 'Print is no longer in the mix' }
       format.json { head :no_content }
     end
   end

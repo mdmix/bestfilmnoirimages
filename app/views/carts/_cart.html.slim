@@ -20,13 +20,13 @@
             td.align-middle
               = link_to '+', add_to_cart_path(product), method: :put, class: "btn add-subtract"
               = link_to '–', remove_one_cart_path(product), method: :put, class: "btn add-subtract"
-              = link_to 'Remove', remove_from_cart_path(product), method: :put, class: "btn btn-danger"
+              = link_to 'Remove', remove_from_cart_path(product), method: :put, class: "btn btn-danger remove-print"
 
         tr.font-weight-bold
           td.checkout-cells colspan="2"
-            h5.checkout-details Total
+            h5.checkout-details.total-price Total
           td.checkout-cells colspan="2"
-            h5.checkout-details colspan="1"
+            h5.checkout-details.total-price colspan="1"
               | #{number_to_currency(@cart_total, precision: 2)}
           td.checkout-cells
             =link_to "Checkout", new_transaction_path, class: "btn btn-success checkout-details checkout-button" unless current_user.get_cart_products_with_qty.blank?
