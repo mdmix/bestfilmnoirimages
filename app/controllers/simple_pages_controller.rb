@@ -4,7 +4,8 @@ class SimplePagesController < ApplicationController
 
   def landing_page
     @featured_product = Product.first
-    @products = Product.limit(4)
+    # @products = Product.limit(4)
+    @products = Product.all
   end
 
   def thank_you
@@ -13,5 +14,5 @@ class SimplePagesController < ApplicationController
     @message = params[:message]
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
-  
+
 end
