@@ -105,3 +105,5 @@ gem 'gon', '~> 6.2.0'
 gem 'dotenv'
 
 gem 'dotenv-rails'
+
+gem 'nokogiri', ">= 1.10.4"
