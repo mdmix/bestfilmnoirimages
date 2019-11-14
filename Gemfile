@@ -70,7 +70,7 @@ group :production do
   # gem 'dalli'
 end
 
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 
 gem 'cancancan', '~> 2.0'
 

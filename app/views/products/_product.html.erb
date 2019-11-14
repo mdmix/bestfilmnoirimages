@@ -8,7 +8,7 @@
       <!-- <div id="img-magnifier"> -->
       <%= image_tag(product.image_url, class: "img-zoom img-responsive products-pix", width: '100', data_zoom_image: 'image_tag(@product.big_image_url)') unless product.image_url.nil? %>
       <!-- </div> -->
-      <h3><%= link_to "#{product.name}", product, id: "product-title" %></h3>
+      <h3><span><%= link_to "#{product.name}", product, id: "product-title" %></span></h3>
 
       <hr class="hr-details">
 
