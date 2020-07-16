@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.2.1'
+gem 'rails', '~> 5.2.4.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.12.3'
 # Use SCSS for stylesheets
@@ -108,8 +108,8 @@ gem 'dotenv-rails'
 
 gem 'nokogiri', '>= 1.10.8'
 
-gem 'actionview', '>= 5.2.2.1'
-
-gem 'actionpack', '>= 5.2.2.1'
-
-gem 'activemodel', '>= 5.2.2.1'
+# gem 'actionview', '>= 5.2.2.1'
+#
+# gem 'actionpack', '>= 5.2.2.1'
+#
+# gem 'activemodel', '>= 5.2.2.1'
