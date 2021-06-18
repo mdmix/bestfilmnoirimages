@@ -6,7 +6,7 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '= 5.2.6'
 # Use Puma as the app server
-gem 'puma', '~> 3.12.3'
+gem 'puma', '>= 4.3.8'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -100,7 +100,7 @@ gem 'braintree', '~> 2.33.1'
 
 gem 'figaro', '~> 1.1.1'
 
-gem 'gon', '~> 6.2.0'
+gem 'gon', '>= 6.4.0'
 
 gem 'dotenv'
 
