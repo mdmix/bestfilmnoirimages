@@ -100,7 +100,7 @@ gem 'braintree', '~> 2.33.1'
 
 gem 'figaro', '~> 1.1.1'
 
-gem 'gon', '~> 6.2.0'
+gem 'gon', '~> 6.4.0'
 
 gem 'dotenv'
 
